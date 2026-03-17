@@ -21,7 +21,7 @@ class Solution:
 ```
 
 ## methods 
-用双层嵌套for循环分别遍历两个数。
+用双层嵌套for分别遍历两个数，找出所有组合进行判断。
 
 ## mistakes&lessons
 1.时间复杂度太高。    
@@ -30,3 +30,25 @@ class Solution:
 4.报错的argument是实参的意思，parameter是形参。    
 5.indices（索引）是index的复数形式。   
 
+## 2026.3.17
+
+## solution
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashmap = {}
+        for i in range(len(nums)):
+            hashmap[nums[i]] = i
+        for i in range(len(nums)):
+            complement = target - nums[i]
+            if complement in hashmap and i != hashmap[complement]:
+                return(i,hashmap[complement])
+```
+
+## methods
+Hashmap search:创建字典查找complement补数和原数相等的元素。
+
+## mistakes&lessons
+1.字典两个同键元素，后者会覆盖前者。
+2.字典默认匹配key。
+3.哈希查找时注意不要和自己重复。
