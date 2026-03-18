@@ -10,7 +10,7 @@ Input: nums = [2,7,11,15], target = 9
 Output: [0,1]  
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]  
 
-## solution
+## solution_1
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -21,7 +21,7 @@ class Solution:
 ```
 
 ## methods 
-用双层嵌套for循环分别遍历两个数。
+用双层嵌套for分别遍历两个数，找出所有组合进行判断。
 
 ## mistakes&lessons
 1.时间复杂度太高。    
@@ -30,3 +30,48 @@ class Solution:
 4.报错的argument是实参的意思，parameter是形参。    
 5.indices（索引）是index的复数形式。   
 
+## 2026.3.17
+
+## solution_2
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashmap = {}
+        for i in range(len(nums)):
+            hashmap[nums[i]] = i
+        for i in range(len(nums)):
+            complement = target - nums[i]
+            if complement in hashmap and i != hashmap[complement]:
+                return(i,hashmap[complement])
+```
+
+## methods
+twopass Hashmap :直接先生成完整的hashmap，再用complement去字典里查找，现存再查。
+
+## mistakes&lessons
+1.字典两个同键元素，后者会覆盖前者。
+2.字典默认匹配key。
+3.哈希查找时注意补数不要和产生自己的原数相等。
+
+## 2026.3.18
+
+## solution_3
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+       hashmap = {}
+       for i in range(len(nums)):
+        complement = target - nums[i]
+        if complement in hashmap:
+            return [hashmap[complement],i]
+        hashmap[nums[i]] = i
+```
+
+## methods
+onepass Hashmap , online algorithm
+先遍历算补数，扫描hashmap里有无和补数相等的key，没有则将补数放入字典，先查再存。
+
+## mistakes&lessons
+1.onepass方法可以避免补数和产生该补数的原数相等（先查再存）。
+2.注意返回值的先后排列顺序。
+            
