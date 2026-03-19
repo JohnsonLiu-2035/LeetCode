@@ -21,7 +21,7 @@ class Solution:
 
 ## mistakes&lessons
 1.tuple可以遍历，可以用len()测量长度。
-2.内置函数set()是在python底部的C中实现，complexity比较低。
+2.内置函数set()是在python底部的C中实现，无for遍历，此方法complexity最低。
 
 
 ## solution_2
@@ -62,4 +62,22 @@ online方法，先查找再添加，灵感来自于onepass hashmap_twosum。能�
 
 ## mistakes&lessons
 1.online process降低复杂度。
-2.先查找再添加的特殊技巧。
+2.先查找再添加的遍历技巧。
+
+## solution_4
+```python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+        for i in nums:
+            if i in seen:
+                return True
+            seen.add(i)
+        return False
+```
+
+## method
+online process的set()版本，先查再存。
+
+## mistakes&lessons
+1.set.add()
