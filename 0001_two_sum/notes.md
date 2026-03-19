@@ -49,9 +49,9 @@ class Solution:
 twopass Hashmap :直接先生成完整的hashmap，再用complement去字典里查找，现存再查。
 
 ## mistakes&lessons
-1.字典两个同键元素，后者会覆盖前者。
-2.字典默认匹配key。
-3.哈希查找时注意补数不要和产生自己的原数相等。
+1.字典两个同键元素，后者会覆盖前者。   
+2.字典默认匹配key。  
+3.哈希查找时注意补数不要和产生自己的原数相等。  
 
 ## 2026.3.18
 
@@ -68,10 +68,10 @@ class Solution:
 ```
 
 ## methods
-onepass Hashmap , online algorithm
-先遍历算补数，扫描hashmap里有无和补数相等的key，没有则将补数放入字典，先查再存。
+onepass Hashmap , online algorithm   
+先遍历算补数，扫描hashmap里有无和补数相等的key，没有则将补数放入字典，先查再存。   
 
 ## mistakes&lessons
-1.onepass方法可以避免补数和产生该补数的原数相等（先查再存）。
-2.注意返回值的先后排列顺序。
+1.onepass方法可以避免补数和产生该补数的原数相等（先查再存）。    
+2.注意返回值的先后排列顺序。   
             
