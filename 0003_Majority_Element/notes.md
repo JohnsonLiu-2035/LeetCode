@@ -3,7 +3,7 @@
 ## 2026.3.19
 
 ## description
-Given an array nums of size n, return the majority element, which has appeared more than n/2 times.
+Given an array `nums` of size n, return the majority element, which has appeared more than n/2 times.
 
 ## solution_1
 ```python
@@ -53,7 +53,7 @@ class Solution:
 1.Counter(literal)返回*字典*，可用来统计元素出现个数，降序排列。   
 2..most_common(n)统计前n个最多出现的数据，返回[( , ),( , )]，降序排列。  
 
-## **solution_4**
+## *solution_4*
 ```python
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
@@ -77,7 +77,7 @@ Boyer-Moore Voting Algorithm(摩尔投票算法)
 ## mistakes&lessons
 1.摩尔投票求major element。
 
-## **solution_5**
+## *solution_5*
 ```python
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
