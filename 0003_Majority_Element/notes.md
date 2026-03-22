@@ -71,7 +71,7 @@ class Solution:
 Boyer-Moore Voting Algorithm(摩尔投票算法)      
 `candidate` 记录当前候选人，`count` 记录当前候选人的剩余票数。    
 遇到相同数字就加一，遇到不同数字就减一，表示不同数字之间互相抵消。    
-当 `count` 变成 0 时，说明前面的数字已经抵消完，需要把当前数字设为新的候选人。    
+当 `count` 变成 0 时，说明前面的数字已经抵消完，需要把当前数字设为新的候选人。    ·
 因为 majority element 的数量超过一半，所以最后留下来的候选人一定是它。   
 
 ## mistakes&lessons
