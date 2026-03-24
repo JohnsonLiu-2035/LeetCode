@@ -26,7 +26,7 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 ```
 
 ## method
-单次遍历，价格低于上一日就更新买入价格（总会比上一日赚钱），高于上一日就计入利润，不买。
+greedy algorithm贪心算法，单次遍历，价格低于上一日就更新买入价格（总会比上一日赚钱），高于上一日就计入利润，不买。
 
 ## mistakes&lessons
 1.尽量不要用暴力解法，尝试最优算法。  
