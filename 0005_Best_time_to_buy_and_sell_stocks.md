@@ -1,4 +1,4 @@
-# Best_time_to_buy_and_sell_stocks
+﻿# Best_time_to_buy_and_sell_stocks
 
 ## 2026.3.23
 
@@ -25,10 +25,25 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
         return profit
 ```
 
+## solution_2
+```python
+    def maxProfit(self, prices: List[int]) -> int:
+        if not prices:
+            return 0
+        profit = 0
+        buy = prices[0]
+        for i in range(1, len(prices)):
+            # 如果今天价格更低，就更新最低买入价
+            buy = min(buy, prices[i])
+            # 如果今天卖出更赚钱，就更新最大利润
+            profit = max(profit, prices[i] - buy)
+        return profit
+```
+
 ## method
 greedy algorithm贪心算法，单次遍历，价格低于上一日就更新买入价格（总会比上一日赚钱），高于上一日就计入利润，不买。
 
 ## mistakes&lessons
-1.尽量不要用暴力解法，尝试最优算法。  
-2.做题之前先想明白思路，尝试化抽象为具体，想好再动手做。  
-3.需要对比的话可以在循环体前维护变量，更新变量来替代暴力存储。   
+1. 尽量不要用暴力解法，尝试最优算法。  
+2. 做题之前先想明白思路，尝试化抽象为具体，想好再动手做。  
+3. 需要对比的话可以在循环体前维护变量，更新变量来替代暴力存储。  

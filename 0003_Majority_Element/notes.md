@@ -22,8 +22,8 @@ class Solution:
 加完以后立刻判断它的次数有没有超过数组长度的一半；如果超过，说明它就是 majority element，直接返回。   
 
 ## mistakes&lessons
-1.time and space comlexity are too high.   
-2.hashmap.get(i,0) + 1：字典循环计数方法。   
+1. time and space comlexity are too high.   
+2. hashmap.get(i,0) + 1：字典循环计数方法。   
 
 ## solution_2
 ```python
@@ -50,8 +50,8 @@ class Solution:
 在Counter类中引入.most_common方法，不用遍历。(solution_3)      
 
 ## mistakes&lessons  
-1.Counter(literal)返回*字典*，可用来统计元素出现个数，降序排列。   
-2..most_common(n)统计前n个最多出现的数据，返回[( , ),( , )]，降序排列。  
+1. Counter(literal)返回*字典*，可用来统计元素出现个数，降序排列。   
+2. .most_common(n)统计前n个最多出现的数据，返回[( , ),( , )]，降序排列。  
 
 ## *solution_4*
 ```python
@@ -75,7 +75,7 @@ Boyer-Moore Voting Algorithm(摩尔投票算法)
 因为 majority element 的数量超过一半，所以最后留下来的候选人一定是它。   
 
 ## mistakes&lessons
-1.摩尔投票求major element。
+1. 摩尔投票求major element。
 
 ## *solution_5*
 ```python
@@ -92,8 +92,8 @@ class Solution:
 所以只需要返回排序后数组中间的元素，不需要再额外统计次数。
 
 ## mistakes&lessons
-1.没有条件判断语句，complexity最低。  
-2.巧用排序，使列表整齐化，提高处理可行性。
+1. 没有条件判断语句，complexity最低。  
+2. 巧用排序，使列表整齐化，提高处理可行性。
 
 
 
