@@ -32,7 +32,7 @@ class Solution:
 
 ## 2026.3.17
 
-## solution_2
+## ***solution_2***
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -46,7 +46,7 @@ class Solution:
 ```
 
 ## methods
-twopass Hashmap :直接先生成完整的hashmap，再用complement去字典里查找，现存再查。
+__twopass Hashmap__ :直接先生成完整的hashmap，再用complement去字典里查找，现存再查。
 
 ## mistakes&lessons
 1. 字典两个同键元素，后者会覆盖前者。   
@@ -55,7 +55,7 @@ twopass Hashmap :直接先生成完整的hashmap，再用complement去字典里�
 
 ## 2026.3.18
 
-## solution_3
+## ***solution_3***
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -68,8 +68,8 @@ class Solution:
 ```
 
 ## methods
-onepass Hashmap , online algorithm   
-先遍历算补数，扫描hashmap里有无和补数相等的key，没有则将补数放入字典，先查再存。   
+__onepass Hashmap__ ，online algorithm   
+先遍历算补数，扫描hashmap里是否有和补数相等的key，没有则将补数放入字典，先查再存。   
 
 ## mistakes&lessons
 1. onepass方法可以避免补数和产生该补数的原数相等（先查再存）。    

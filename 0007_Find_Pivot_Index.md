@@ -27,11 +27,11 @@ class Solution:
 2. 看到“左右和相等”时，可以优先考虑“总和 + 前缀和”优化。  
 3. 题目要求最左下标，找到后应立即返回。
 
-## solution_2
+## ***solution_2***
 ```python
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
-        # 核心：用 left_sum 递推，并由 total_sum - left_sum - num O(1) 得到 right_sum
+        # 核心：用 left_sum 递推，并由 total_sum - left_sum - num 得到 right_sum
         left_sum = 0
         total_sum = sum(nums)
         for i, num in enumerate(nums):

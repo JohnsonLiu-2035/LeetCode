@@ -8,7 +8,7 @@ Output: 5
 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.   
 Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.  
 
-## solution
+## solution_1
 ```python
     def maxProfit(self, prices: List[int]) -> int:
         # 维护两个状态：
@@ -41,9 +41,10 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 ```
 
 ## method
-greedy algorithm贪心算法，单次遍历，价格低于上一日就更新买入价格（总会比上一日赚钱），高于上一日就计入利润，不买。
+__greedy algorithm贪心算法__，单次遍历，价格低于上一日就更新买入价格（总会比上一日赚钱），高于上一日就计入利润，不买。
 
 ## mistakes&lessons
 1. 尽量不要用暴力解法，尝试最优算法。  
 2. 做题之前先想明白思路，尝试化抽象为具体，想好再动手做。  
 3. 需要对比的话可以在循环体前维护变量，更新变量来替代暴力存储。  
+4. 用max( ) min( )函数来简化算法，代替if判断。   

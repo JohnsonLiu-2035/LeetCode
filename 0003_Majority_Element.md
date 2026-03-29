@@ -53,7 +53,7 @@ class Solution:
 1. Counter(literal)返回*字典*，可用来统计元素出现个数，降序排列。   
 2. .most_common(n)统计前n个最多出现的数据，返回[( , ),( , )]，降序排列。  
 
-## *solution_4*
+## ***solution_4***
 ```python
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
@@ -68,7 +68,7 @@ class Solution:
         return candidate
 ```
 ## method
-Boyer-Moore Voting Algorithm(摩尔投票算法)      
+__Boyer-Moore Voting Algorithm(摩尔投票算法)__      
 `candidate` 记录当前候选人，`count` 记录当前候选人的剩余票数。    
 遇到相同数字就加一，遇到不同数字就减一，表示不同数字之间互相抵消。    
 当 `count` 变成 0 时，说明前面的数字已经抵消完，需要把当前数字设为新的候选人。    ·

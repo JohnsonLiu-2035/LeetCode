@@ -64,7 +64,7 @@ online方法，先查找再添加，灵感来自于onepass hashmap_twosum。能�
 1. online process降低复杂度。   
 2. 先查找再添加的遍历技巧。
 
-## solution_4
+## ***solution_4***
 ```python
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:

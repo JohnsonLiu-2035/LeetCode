@@ -34,7 +34,7 @@ class Solution:
 1. 代码太繁琐，需要单独加很多限制条件。
 2. 静态思维方法，不够灵活适配。
 
-## *solution_2*
+## ***solution_2***
 ```python
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
@@ -48,7 +48,7 @@ class Solution:
 
 ## method
 enumerate查找键值     
-哈希表存储{num:index}     
+__哈希表__ 存储{num:index}     
 如果哈希表中有该遍历的键，且二者index差值小于k，则True    
 否则继续遍历，直至完成返回False     
 
@@ -57,7 +57,7 @@ enumerate查找键值
 2. enumerate()返回(index,value)的迭代器。  
 3. 先查再存模式（先判断再添加）。    
 
-## *solution_3*
+## ***solution_3***
 ```python
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:

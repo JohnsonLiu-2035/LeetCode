@@ -37,7 +37,7 @@ class Solution:
                 nums[i] = nums[i] + nums[i-1]
         return nums
 ```
-## *solution3*
+## ***solution3***
 ```python
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:

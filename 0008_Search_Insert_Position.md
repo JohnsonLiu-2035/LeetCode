@@ -32,7 +32,7 @@ class Solution:
 2. `in` 和 `index()` 虽然写起来方便，但本质上都需要遍历数组，所以效率不高。  
 3. 题目要求时间复杂度为 `O(log n)`，后续更优解法应该考虑二分查找。  
 
-## *solution_2*
+## ***solution_2***
 ```python
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
@@ -50,7 +50,7 @@ class Solution:
 ```
 
 ## method
-二分查找 Binary Search，因为数组本身已经是升序排列。  
+__二分查找 Binary Search__，因为数组本身已经是升序排列。  
 先定义左右边界 `left` 和 `right`，每次取中间位置 `mid` 和 `target` 进行比较。  
 如果 `nums[mid] == target`，说明已经找到目标值，直接返回 `mid`。  
 如果 `nums[mid] > target`，说明目标值只可能出现在左半边，所以把右边界更新为 `mid - 1`。  
