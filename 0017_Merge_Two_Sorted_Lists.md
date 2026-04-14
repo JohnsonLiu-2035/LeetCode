@@ -57,7 +57,7 @@ __linked list + iteration + dummy node__
 - `list2`：第二条链表当前走到的节点
 - `cur`：结果链表当前的尾节点
 
-`dummy` 是一个虚拟头节点，它只是为了让操作更统一。真正的答案不是 `dummy`，而是 `dummy.next`。
+`dummy` 是一个虚拟头节点，它只是为了让操作更统一。真正的答案不是 `dummy`，而是 `dummy.next`（`cur`的头节点）。
 
 循环里每次做的事情都一样：
 
@@ -72,7 +72,7 @@ __linked list + iteration + dummy node__
 - `list1 = list1.next` 是让 `list1` 这个指针往后移动
 - `cur = cur.next` 是让结果链表的尾指针往后移动
 
-当 `while list1 and list2` 结束时，说明至少有一条链表已经空了。另一条链表剩下的部分本来就是有序的，所以可以直接整体接到后面：
+当 `while list1 and list2` 结束时，说明至少有一条链表已经空了。另一条链表剩下的部分有序且一定大于尾指针，所以可以直接整体接到后面：
 
 ```python
 cur.next = list1 if list1 else list2
